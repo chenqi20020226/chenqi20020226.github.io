@@ -1,1 +1,403 @@
 
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="Qi Chen - M.S. Student at Beijing Institute of Technology. Research in Embodied AI, VLA, and Robot Learning.">
+<title>Qi Chen | Academic Homepage</title>
+
+<style>
+:root {
+    --bg: #ffffff;
+    --text: #263445;
+    --muted: #66758a;
+    --accent: #2563a6;
+    --line: #e8edf2;
+    --soft: #f5f8fb;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: -apple-system, BlinkMacSystemFont,
+    "Segoe UI", Arial, sans-serif;
+    color: var(--text);
+    background: var(--bg);
+    line-height: 1.75;
+}
+
+a {
+    color: var(--accent);
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+.container {
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 0 30px;
+}
+
+/* Navigation */
+
+nav {
+    border-bottom: 1px solid var(--line);
+    background: rgba(255,255,255,0.96);
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+.nav-inner {
+    max-width: 1000px;
+    margin: auto;
+    padding: 15px 30px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    font-size: 19px;
+    font-weight: 700;
+    color: var(--text);
+}
+
+.nav-links {
+    display: flex;
+    gap: 25px;
+    font-size: 14px;
+}
+
+.nav-links a {
+    color: var(--muted);
+}
+
+/* Hero */
+
+.hero {
+    padding: 75px 0 55px;
+    display: flex;
+    align-items: center;
+    gap: 45px;
+}
+
+.avatar {
+    width: 145px;
+    height: 145px;
+    border-radius: 50%;
+    background: #eaf1f8;
+    color: #315d89;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 43px;
+    font-weight: 700;
+    flex-shrink: 0;
+}
+
+.hero h1 {
+    font-size: 38px;
+    line-height: 1.3;
+    margin-bottom: 10px;
+}
+
+.subtitle {
+    color: var(--muted);
+    font-size: 17px;
+    margin-bottom: 17px;
+}
+
+.hero p {
+    font-size: 15px;
+    max-width: 690px;
+}
+
+.links {
+    margin-top: 20px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    font-size: 14px;
+}
+
+/* Sections */
+
+section {
+    padding: 35px 0;
+    border-top: 1px solid var(--line);
+}
+
+h2 {
+    font-size: 23px;
+    margin-bottom: 22px;
+    color: #243b53;
+}
+
+section p {
+    font-size: 15px;
+    margin-bottom: 12px;
+}
+
+.interests {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.tag {
+    background: var(--soft);
+    border: 1px solid var(--line);
+    padding: 7px 13px;
+    border-radius: 5px;
+    font-size: 13px;
+    color: #425b75;
+}
+
+/* Publications */
+
+.publication {
+    padding: 17px 20px;
+    background: var(--soft);
+    border-left: 3px solid var(--accent);
+    border-radius: 4px;
+    margin-bottom: 16px;
+}
+
+.publication-title {
+    font-weight: 650;
+    font-size: 16px;
+}
+
+.publication-meta {
+    color: var(--muted);
+    font-size: 14px;
+    margin-top: 5px;
+}
+
+/* Education */
+
+.education-item {
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+    padding: 15px 0;
+    border-bottom: 1px solid var(--line);
+}
+
+.education-item:last-child {
+    border-bottom: none;
+}
+
+.education-item strong {
+    font-size: 15px;
+}
+
+.education-item p {
+    color: var(--muted);
+    margin: 3px 0 0;
+    font-size: 14px;
+}
+
+.year {
+    color: var(--muted);
+    white-space: nowrap;
+    font-size: 14px;
+}
+
+/* Footer */
+
+footer {
+    border-top: 1px solid var(--line);
+    padding: 25px 0;
+    color: var(--muted);
+    text-align: center;
+    font-size: 13px;
+}
+
+@media(max-width: 650px) {
+    .nav-inner {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .nav-links {
+        gap: 13px;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .hero {
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 45px 0;
+        gap: 20px;
+    }
+
+    .hero h1 {
+        font-size: 31px;
+    }
+
+    .avatar {
+        width: 110px;
+        height: 110px;
+        font-size: 34px;
+    }
+
+    .container {
+        padding: 0 20px;
+    }
+}
+</style>
+</head>
+
+<body>
+
+<nav>
+    <div class="nav-inner">
+        <a class="logo" href="#">Qi Chen</a>
+        <div class="nav-links">
+            <a href="#about">About</a>
+            <a href="#research">Research</a>
+            <a href="#publications">Publications</a>
+            <a href="#education">Education</a>
+            <a href="#contact">Contact</a>
+        </div>
+    </div>
+</nav>
+
+<main class="container">
+
+    <!-- About Me -->
+    <div class="hero" id="about">
+
+        <div class="avatar">QC</div>
+
+        <div>
+            <h1>Qi Chen</h1>
+
+            <div class="subtitle">
+                M.S. Student · Beijing Institute of Technology
+            </div>
+
+            <p>
+                I am a Master's student at Beijing Institute of
+                Technology. My research focuses on embodied
+                intelligence, vision-language-action models,
+                and robot learning. I am particularly interested
+                in enabling robots to acquire new manipulation
+                skills from human demonstrations and generalize
+                to unseen tasks.
+            </p>
+
+            <div class="links">
+                <a href="mailto:3220251260@bit.edu.cn">Email</a>
+                <a href="https://github.com/chenqi20020226"
+                   target="_blank">GitHub</a>
+                <a href="#publications">Publications</a>
+            </div>
+        </div>
+
+    </div>
+
+    <!-- Research Interests -->
+    <section id="research">
+        <h2>Research Interests</h2>
+
+        <div class="interests">
+            <span class="tag">Embodied AI</span>
+            <span class="tag">Vision-Language-Action Models</span>
+            <span class="tag">Robot Manipulation</span>
+            <span class="tag">Imitation Learning</span>
+            <span class="tag">Human-Robot Interaction</span>
+            <span class="tag">Multimodal Learning</span>
+            <span class="tag">Domain Adaptation</span>
+        </div>
+    </section>
+
+    <!-- Publications -->
+    <section id="publications">
+        <h2>Selected Publications</h2>
+
+        <div class="publication">
+            <div class="publication-title">
+                LongVIL
+            </div>
+            <div class="publication-meta">
+                IEEE Robotics and Automation Letters (RA-L), 2026
+            </div>
+        </div>
+
+    </section>
+
+    <!-- Education -->
+    <section id="education">
+        <h2>Education</h2>
+
+        <div class="education-item">
+            <div>
+                <strong>
+                    Beijing Institute of Technology
+                </strong>
+                <p>M.S. Student</p>
+            </div>
+            <div class="year">2025 – 2028</div>
+        </div>
+
+        <div class="education-item">
+            <div>
+                <strong>Hunan University</strong>
+                <p>
+                    B.Eng. in Intelligent Science and Technology
+                </p>
+            </div>
+        </div>
+
+    </section>
+
+    <!-- Contact -->
+    <section id="contact">
+        <h2>Contact</h2>
+
+        <p>
+            I am always interested in academic discussions
+            and research collaborations.
+        </p>
+
+        <p>
+            Email:
+            <a href="mailto:3220251260@bit.edu.cn">
+                3220251260@bit.edu.cn
+            </a>
+        </p>
+
+        <p>
+            GitHub:
+            <a href="https://github.com/chenqi20020226"
+               target="_blank">
+                github.com/chenqi20020226
+            </a>
+        </p>
+    </section>
+
+</main>
+
+<footer>
+    © 2026 Qi Chen. All rights reserved.
+</footer>
+
+</body>
+</html>
+
